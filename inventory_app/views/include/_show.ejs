@@ -1,0 +1,19 @@
+<% for(var i=0; i<inventorys.length; i++){ %>
+<tr>
+    <td><%= i+1 %></td>
+    <td><%= inventorys[i].name %></td>
+    <td><%= inventorys[i].category %></td>
+    <td><%= inventorys[i].flavour %></td>
+    <td><%= inventorys[i].qty %></td>
+    <td><%= inventorys[i].temp %></td>
+    <td><%= inventorys[i].status %></td>
+    <td>
+        <a href="/update-inventory?id=<%= inventorys[i]._id %>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fa-solid fa-pen-to-square"></i> Update</span>
+        </a>
+        <a class="btn border-shadow delete" data-id="<%= inventorys[i]._id %>">
+            <span class="text-gradient"><i class="fa-solid fa-trash-can"></i> Delete</span>
+        </a>
+    </td>
+</tr>
+<% } %>

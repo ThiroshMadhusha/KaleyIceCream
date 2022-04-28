@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+
+    <!-- Header Content -->
+      <header id="header">
+        <nav>
+            <div class="container">
+                <div class="text-center">
+                    <a href="/" class="nav-brand text-dark">Inventory Managemenet</a>
+                </div>
+            </div>
+        </nav>
+
+    </header>
+<br>
+      <!-- /Header Content -->
+
+
+
+
+      <!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-inventory" class="border-shadow">
+                    <span class="text-gradient"> Create New Inventory <i class="fa-solid fa-warehouse"></i></span>
+                </a>
+            </div>
+
+            <!-- form handling -->
+            <form action="/" method="POST">
+                <table class="table">
+                    <thead class="thead-blue">
+                        <tr>
+                            <th>ID</th>
+                            <th>Freazer ID</th>
+                            <th>Category</th>
+                            <th>Flavour</th>
+                            <th>Quantity</th>
+                            <th>Temparature(°C)</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>F001</td>
+                            <td>Cup</td>
+                            <td>Chocolate</td>
+                            <td>100</td>
+                            <td>10</td>
+                            <td>Active</td>
+                            <td>
+                                <a href="#" class="btn border-shadow update">
+                                    <span class="text-gradient"><i class="fa-solid fa-pen-to-square"></i>Update</span>
+                                </a>
+                                <a class="btn border-shadow delete">
+                                    <span class="text-gradient"><i class="fa-solid fa-trash-can"></i>Delete</span>
+                                </a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+            
+        </div>
+    </main>
+
+    <!-- /Main Site -->
+    
+</body>
+</html>

@@ -54,7 +54,7 @@
         <nav>
             <div class="container">
                 <div class="text-center">
-                    <a href="/" class="nav-brand text-dark">Inventory Managemenet</a>
+                    <a href="/" class="nav-brand text-dark">Order Managemenet</a>
                 </div>
             </div>
         </nav>
@@ -91,26 +91,26 @@
         <div class="container">
             <div class="box-nav d-flex justify-between">
                 <div class="filter">
-                    <a href="/"><i class="fas fa-angle-double-left"></i> View All Inventorys</a>
+                    <a href="/"><i class="fas fa-angle-double-left"></i> View All Orders</a>
                 </div>
             </div>
             <div class="form-title text-center">
-                <h2 class="text-dark">Update Inventory</h2>
-                <span class="text-light">Use The Below Form to Update The Inventory Items</span>
+                <h2 class="text-dark">Update Order Details</h2>
+                <span class="text-light">Use The Below Form to Update The Order Items</span>
             </div>
 
              <!-- form handling -->       
-             <form action="/api/inventorys" method="POST" id="update_inventory">    
+             <form action="/api/orders" method="POST" id="update_order">    
                <div class="new_user">
                     <div class="form-group">
-                        <lable for="name" class="text-light">Freazer ID</lable>
-                        <input type="hidden" name="id" value="<%= inventory._id %>">
-                        <input type="text" name="name" value="<%= inventory.name %>" placeholder="Enter The Freazer Id" readonly>
+                        <lable for="name" class="text-light">Order ID</lable>
+                        <input type="hidden" name="id" value="<%= order._id %>">
+                        <input type="text" name="name" value="<%= order.name %>" placeholder="Enter The Order Id" readonly>
                     </div>
 
                     <div class="form-group">
                         <lable for="category" class="text-light">Category</lable>
-                        <input type="text" name="category" value="<%= inventory.category %>" placeholder="Enter The Category" readonly>
+                        <input type="text" name="category" value="<%= order.category %>" placeholder="Enter The Category" readonly>
                         <select id="select" name="category" required>
                            <option select disable hidden>Select Category Type</option>
                             <option value="Cup">Cup</option>
@@ -125,7 +125,7 @@
 
                     <div class="form-group">
                         <lable for="flavour" class="text-light">Flavour</lable>
-                        <input type="text" name="flavour" value="<%= inventory.flavour %>" placeholder="Enter The Flavour Type" readonly>
+                        <input type="text" name="flavour" value="<%= order.flavour %>" placeholder="Enter The Flavour Type" readonly>
                         <select id="select" name="flavour" required>
                             <option select disable hidden>Select Flavour Type</option>
                             <option value="Chocolate">Chocolate</option>
@@ -140,12 +140,12 @@
 
                     <div class="form-group">
                         <lable for="qty" class="text-light">Quantity</lable>
-                        <input type="number" max="" min="1" name="qty" value="<%= inventory.qty %>" placeholder="Enter The Quantity Value" >
+                        <input type="number" max="" min="1" name="qty" value="<%= order.qty %>" placeholder="Enter The Quantity Value" >
                     </div>
 
                     <div class="form-group">
-                        <lable for="temp" class="text-light">Temparature</lable>
-                        <input type="number" max="5" min="-10" name="temp" value="<%= inventory.temp %>" placeholder="Enter The Temparature Value" >
+                        <lable for="temp" class="text-light">Order Manager</lable>
+                        <input type="text" name="temp" value="<%= order.cus %>" placeholder="Enter The Temparature Value" >
                     </div>
 
                     <div class="form-group">
@@ -160,7 +160,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <button type="submit" class="btn text-dark update">Update Inventory</button>
+                        <button type="submit" class="btn text-dark update">Update Order Details</button>
                     </div>
                     <!-- <div class="form-group">
                         <input type="submit" value="Submit">

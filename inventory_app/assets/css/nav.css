@@ -1,6 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 .snip1143 {
-  font-family: "Raleway", Arial, sans-serif;
+  font-family: 'Raleway', Arial, sans-serif;
   text-align: center;
   text-transform: uppercase;
   font-weight: 500;
@@ -52,14 +52,15 @@
 .snip1143 .current a {
   transform: translateY(-100%);
 }
-/* Demo purposes only */
+  /* Demo purposes only */
 body {
-  height: 90vh;
-  display: flex;
+	height: 90vh;
+	display: flex;
   align-items: center;
   justify-content: center;
-  background: #ece1e1;
+	background: #ece1e1;
 }
+
 
 /* Demo purposes only */
 html {

@@ -120,7 +120,6 @@ exports.contentDisposition = deprecate.function(contentDisposition,
  * also includes `.originalIndex` for stable sorting
  *
  * @param {String} str
- * @param {Number} index
  * @return {Object}
  * @api private
  */

@@ -1,7 +1,7 @@
 {
   "name": "inventory_app",
   "version": "1.0.0",
-  "description": "inventory application with express and mongodb",
+  "description": "crud application with express and mongodb",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,13 +14,19 @@
   "author": "thirosh",
   "license": "ISC",
   "dependencies": {
-    "axios": "^0.27.2",
+    "axios": "^0.26.1",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.0",
     "dotenv": "^16.0.0",
-    "ejs": "^3.1.7",
-    "express": "^4.18.0",
-    "mongoose": "^6.3.1",
+    "ejs": "^3.1.6",
+    "express": "^4.17.3",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.8.5",
     "morgan": "^1.10.0",
-    "nodemon": "^2.0.15"
+    "nodemon": "^2.0.15",
+    "passport": "^0.5.2",
+    "passport-local": "^1.0.0"
   }
 }

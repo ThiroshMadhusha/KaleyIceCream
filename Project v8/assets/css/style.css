@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+:root{
+    --dark:#2b2d42;
+    --light:#adb5bd;
+    --border:#dee2e6;
+    --border-btn:#edf2f4;
+}
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+a{
+    font-size: 1.5em;
+    text-decoration: none;
+    font-family: 'PT Sans', sans-serif;
+    padding: .4em 2em;
+    font-size: 1em;
+    margin: 0em;
+}
+
+.container{
+    max-width:1024px;
+    margin:auto;
+}
+
+.nav-brand{
+    font-size:1.5em;
+    font-weight:bold;
+}
+
+.d-flex{
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.justify-between{
+    justify-content:space-between;
+}
+
+.text-center{
+    text-align: center;
+}
+
+
+.border-shadow{
+    border: 1px solid var(--border-btn);
+    box-shadow: 1px 3px 10px #655c5c5a;
+}
+
+.text-dark{
+    color:var(--dark);
+}
+
+.text-light{
+    color: var(--light);
+}
+
+.text-gradient{
+    background:linear-gradient(to right,#039be5,#039be5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color:transparent;
+}
+
+#header nav{
+    background-color: #81d4fa;
+    padding: 1em 0;
+    width: 100%;
+}
+
+#site-main{
+    margin-top:2em;
+    font-family: 'PT Sans', sans-serif;
+}
+
+#site-main.container.box-nav>a{
+    font-size: 1em;
+    padding: 5em 1em;
+}
+
+#site-main.container form{
+    margin: 2em 0;
+}
+
+table{
+    border-spacing: 0px;
+    width: 100%;  
+}
+
+table td, .table th{
+    padding: .75em;
+    vertical-align: top;
+    text-align: center;
+    border-top: 1px solid var(--border);
+}
+
+.table td>a.btn{
+    padding: .4em 1.0em;
+    font-size: 1em;
+    margin: 0.2em;
+ 
+}
+.table td{
+    padding: 1.em 3em;
+    font-size: 1em;
+    margin: 0.2em;
+    
+}
+.table tr:hover{
+    background-color:#81d4fa;
+}
+
+
+.table .thead-dark th{
+    color:#fff;
+    background-color: var(--dark);
+    border-color: #32383e;
+}
+
+
+/* add user & update user 
+
+.form-title{
+    margin-top: 2em;
+}
+
+.form-title>h2{
+    max-width:786px;
+    margin:auto;
+}
+
+#update_user .form-group{
+    margin: 4em 0;
+}
+#add_user .form-group{
+    margin: 4em 0;
+}
+
+#update_user .form-group input[type="text"]{
+    width: 100%;
+    padding: .6em 1em;
+    margin: 5em 0;
+    border: 1px solid var(--border);
+}
+
+*/

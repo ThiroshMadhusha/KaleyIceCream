@@ -16,7 +16,7 @@ exports.create = (req, res) => {
       temp: req.body.temp,
       status: req.body.status,
     });
-    // save user in the database
+    // save inventory in the database
     inventory
         .save(inventory)
         .then(data => {

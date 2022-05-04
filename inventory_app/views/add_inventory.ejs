@@ -7,85 +7,21 @@
     <link rel="stylesheet" href="css/navbar.css"
     
 </head>
-
-
-<!--include header-->
-<%-include('include/_header')%>
-<!--/include header-->
-
-
+        <!--include header-->
+        <%-include('include/_header')%>
+        <!--/include header-->
 <body>
-    <!-- Side navigation bar start -->
-	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
-	<div id="myNav" class="overlay">
-		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-		<div class="sidenav hidescroll">
-      <img class="sideNav-logo" src="images/logoWhite.png"/>
-      <!-- <link rel="stylesheet" href="css/background.css"> -->
-<!-- Sidebar -->
-<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-  <a href="http://localhost:3000/" class="w3-bar-item w3-button">Inventory Management</a>
-  <a href="#" class="w3-bar-item w3-button">Supplier Management</a>
-  <a href="#" class="w3-bar-item w3-button">Sales Management</a>
-  <a href="#" class="w3-bar-item w3-button">Employee Management</a>
-  <a href="#" class="w3-bar-item w3-button">Home</a>
-</div>
-         </div>
-	</div>
-	<!-- Side navigation bar end -->
+        <!-- Side navigation bar start -->
+        <%-include('include/_sidenav')%>
+        <!-- Side navigation bar end -->
+	
+        <!-- Header Content -->
+        <%-include('include/_navbar')%>
+        <!-- /Header Content -->
 
-
-	<!-- start content -->
-
-    <br/>
-
-<link rel="stylesheet" href="css/background.css">
-
-<div class="background-image"></div>
-
-<div class="main">
-
-    <div style="color: rgb(22, 5, 5)">
-
-      <h2></h2>
-
-      <!-- Header Content -->
-      <header id="header">
-        <nav>
-            <div class="container">
-                <div class="text-center">
-                    <a href="/" class="nav-brand text-dark">Inventory Managemenet</a>
-                </div>
-            </div>
-        </nav>
-
-    </header>
-<br>
-      <!-- /Header Content -->
-      <!-- Navbar -->
-      <div class="topnav">
-        <a class="#" href="#home">Home</a>
-        <a href="http://localhost:3000/">Dashboard</a>
-        <a href="http://localhost:3000/add-inventory">Inventory</a>
-        <div class="search-container">
-            <form action="/action_page.php">
-            <input type="text" placeholder="Search.." name="search">
-            <button type="submit"><i class="fa fa-search"></i></button>
-            </form>
-        </div>
-        <a href="#">Logout </a>
-        <a href="#">Profile <i class="fa-solid fa-user"></i></a>  
-      </div>
-      <!-- /Navbar -->
-
-    
- <!-- header and footer >>index.ejs file eken -->
-
-<!-- header and footer >>index.ejs file eken -->
-
-<!-- include header -->
-<%-include('include/_header')%>
-<!-- /include header -->
+        <!-- Nav Bar -->      
+        <%-include('include/_nav')%>
+        <!-- /Navbar -->
 
 <!-- Main Site -->
     <main id="site-main">
@@ -99,25 +35,16 @@
                 <h2 class="text-dark">Create New Inventory</h2>
                 <span class="text-light">Create new Inventory Items Using This Below Form</span>
             </div>
-
             <!-- include form -->
             <%-include('include/_form')%>
             <!-- /include form -->        
-
-<!-- mehi form tag eka wenama partial file ekakata pase kara -->
-<!-- form tag >> include/_form.ejs -->
         </div>
     </main>
-
-    <!-- /Main Site -->
-
-<!-- include footer -->
-<%-include('include/_footer')%>
-<!-- /include footer -->
-
-
-	<!-- end page content -->
-
+<!-- End Main Site -->
+            <!-- include footer -->
+            <%-include('include/_footer')%>
+            <!-- /include footer -->
+<!-- end page content -->
 	</div>
 </body>
 </html>

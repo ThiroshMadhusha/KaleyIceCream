@@ -26,7 +26,20 @@ exports.update_inventory = (req, res) => {
             res.send(err);
     })
 
-    // res.render("update_inventory");
 }
 
+exports.view_inventory = (req, res) => {
+  axios
+    .get("http://localhost:3000/api/inventorys", {
+      params: { id: req.query.id },
+    })
+    .then(function (inventorydata) {
+      res.render("view_inventory", { inventory: inventorydata.data });
+    })
+    .catch((err) => {
+      res.send(err);
+    });
+};
+
 // ------------------------------------------------------------
+

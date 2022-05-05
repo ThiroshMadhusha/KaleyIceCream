@@ -61,3 +61,24 @@
     opacity: 0.7;
     background-color: #039be5;
   }
+
+
+  
+input[type=text], select {
+  color: grey;
+  text-align: left;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+div[class=form-group]{
+  border-radius: 0px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: left;
+}

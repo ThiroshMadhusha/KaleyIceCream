@@ -1,0 +1,24 @@
+
+<% for(var i = 0; i < sales.length; i++) { %>
+<tr>
+    <td> <%= i+1%> </td>
+    <td> <%= sales[i].invoiceno%> </td>
+    <td> <%= sales[i].date%> </td>
+    <td> <%= sales[i].productcatagory%></td>
+    <td> <%= sales[i].buyername%> </td>
+
+
+    
+    <td>
+        <a href="/update-sales?id=<%= sales[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient">Update  <i class="fa-solid fa-file-pen"></i></span>
+        </a>
+
+        <a class="btn border-shadow delete" data-id=<%= sales[i]._id%>>
+            <span class="text-gradient">Delete  <i class="fa-solid fa-trash"></i></span>
+        </a>
+
+    </td>
+</tr>
+
+<% } %>

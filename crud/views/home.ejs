@@ -1,0 +1,40 @@
+<%- include('include/_header') %>
+
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <a href="/add-sales" class="border-shadow">
+                <span class="text-gradient">Add new sales record <i class="fa-solid fa-file-circle-plus"></i> </span>
+            </a>
+
+        </div>
+
+      <form action="/" method="POST">
+          <table class="table">
+              <thead class="thead-dark">
+              <tr>
+                  <th> id </th>
+                  <th> Invoice No </th>
+                  <th> Date </th>
+                  <th> Product Catagory </th>
+                  <th> Buyer Name </th>
+                  <th> Action</th>
+              </tr>
+          </thead>
+          <tbody>
+
+                 <%- include('include/_show') %>
+
+          </tbody>
+          </table>
+      </form>
+        
+    </div>
+</main>
+
+
+
+<%- include('include/_footer') %>
+
+
+

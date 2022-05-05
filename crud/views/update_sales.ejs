@@ -1,0 +1,70 @@
+<%- include('include/_header') %>
+
+
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/"><i class="fas fa-angel-double-left"></i> All Sales</a>
+            </div>
+
+        </div>
+
+        <div class="form-title text-center">
+
+            <h2 class="text-dark">Update Sales record</h2>
+            <span class="text-light">Use the below form to update sales recode</span>
+
+        </div>
+        <form method="POST" id="update_sales">
+            <div class="new_sales">
+        
+                <div class="form-group">
+                    <lable for="invoice" class="text-light">Invoice No</lable>
+                    <input type="hidden" name="id" value="<%= sales._id%>">
+                    <input type="text" name="invoiceno" value="<%= sales.invoiceno%> " placeholder="">
+                </div>
+        
+                <div class="form-group">
+                    <lable for="Product" class="text-light"> Product Catagory</lable>
+                    <input type="text" name="productcatagory" value="<%= sales.productcatagory%>" placeholder="">
+                    
+                </div>
+        
+                <div class="form-group">
+                    <lable for="Date" class="text-light">Date</lable>
+                    <input type="text" name="date" value="<%= sales.date%>" placeholder="">
+                </div>
+        
+                <div class="form-group">
+                    <lable for="Bname" class="text-light">Buyer Name</lable>
+                    <input type="text" name="buyername" value="<%= sales.buyername%>" placeholder="">
+                </div>
+        
+                <div class="form-group">
+                    <lable for="Bcontact" class="text-light">Buyer contact</lable>
+                    <input type="text" name="buyercontact" value="<%= sales.buyercontact%>" placeholder="">
+                </div>
+        
+                <div class="form-group">
+                    <lable for="Quantity" class="text-light">Quantity</lable>
+                    <input type="text" name="quantity" value="<%= sales.quantity%>" placeholder="">
+                </div>
+        
+                <div class="form-group">
+                    <lable for="RPQuantity" class="text-light">Rate per one quantity</lable>
+                    <input type="text" name="rateperonequantity" value="<%= sales.rateperonequantity%>" placeholder="">
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn text-dark update">Submit</button>
+                </div>
+              
+            </div>    
+        </form>
+
+    </div>
+</main>
+
+
+
+<%- include('include/_footer') %>

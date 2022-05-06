@@ -30,3 +30,13 @@ exports.update_sales=(req,res)=>{
         res.send(err);
     })
 }
+
+exports.view_sales=(req,res)=>{
+    axios.get('http://localhost:3000/api/sales', { params : { id : req.query.id }})
+    .then(function(salesdata){
+        res.render("view_sales", { sales : salesdata.data})
+    })
+    .catch(err =>{
+        res.send(err);
+    })
+}

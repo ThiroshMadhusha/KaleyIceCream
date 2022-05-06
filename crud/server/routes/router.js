@@ -11,6 +11,8 @@ route.get('/add-sales',services.add_sales)
 
 route.get('/update-sales',services.update_sales)
 
+route.get('/view-sales',services.view_sales)
+
 
 route.post('/api/sales',controller.create);
 route.get('/api/sales',controller.find);

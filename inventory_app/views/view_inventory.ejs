@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/body.css">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>   
+    <script src="https://kit.fontawesome.com/f9663b911f.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js">
+</head>
+        <!--include header-->
+        <%-include('include/_header')%>
+        <!--/include header-->
+<body>
+        <!-- Side navigation bar start -->
+        <%-include('include/_sidenav')%>
+        <!-- Side navigation bar end -->    
+
+        <!-- Header Content -->
+        <%-include('include/_navbar')%>
+        <!-- End Header Content -->
+
+        <!-- Nav Bar -->      
+        <%-include('include/_nav')%>
+        <!-- End Navbar -->
+
+        <!-- Create PDF -->      
+        <%-include('include/_pdf')%>
+        <!-- End PDF -->
+
+<!-- Main Site -->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <div class="filter">
+                    <a href="/"><i class="fas fa-angle-double-left"></i> View All Inventorys</a>
+                </div>
+            </div>
+
+            <div class="form-title text-center">
+                <h2 class="text-dark">View Inventory Data</h2>
+                <span class="">Use The Below Form to Generate Inventory Items Daily Reports</span>
+            </div>
+                <div class="container mt-3 mb-2" id="inventory">
+                    <div class="card card-body bg-light">
+                        <center>
+                            <table border="0" width=1000;>
+                                <tr>
+                                    <td colspan=4 >
+                                        <h1 class="my-4 text-info display-1 font-weight-bold">Kaley Ice Cream</h1>
+                                        <p>Kaley Ice Creame Daily Inventory Summary Report.</p>
+                                        <hr>
+                                    </td>
+                                </tr>
+                                
+                            </table>
+                        </center>
+                        <!-----------------------------Create Contact Form-------------------------------------->
+
+                        <div class="card card-body bg-light row my-1 col-md-11" style="margin-left:30px" >
+                            <h2 class="text-danger">Daily Inventory Report</h2>
+                            <hr>
+                            <form>
+                                <div class="mb-3 row" style="margin-left:80px">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">Freazer ID :</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" name="name" value="<%= inventory.name %>" readonly class="form-control-plaintext" id="staticEmail">
+                                    </div>
+                                </div>
+
+                                <div class="mb-3 row" style="margin-left:80px">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">Category Type :</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" name="category" value="<%= inventory.category %>" readonly class="form-control-plaintext" id="staticEmail">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="margin-left:80px">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">Flavour Type :</label>
+                                    <div class="col-sm-4">
+                                        <input type="text" class="form-control" name="flavour" value="<%= inventory.flavour %>" readonly class="form-control-plaintext" id="staticEmail">
+                                    </div>
+                                </div>
+                                <div class="mb-3 row" style="margin-left:80px">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">Quantity Value :</label>
+                                    <div class="col-sm-4">
+                                        <input type="number" class="form-control" name="qty" value="<%= inventory.qty %>" readonly class="form-control-plaintext" id="staticEmail">
+                                    </div>
+                                </div>
+                                <div class="mb-1 row" style="margin-left:80px">
+                                    <label for="staticEmail" class="col-sm-5 col-form-label">Temparature Value :</label>
+                                    <div class="col-sm-4">
+                                        <input type="number" class="form-control" name="temp" value="<%= inventory.temp %>" readonly class="form-control-plaintext" id="staticEmail">
+                                    </div>
+                                </div>
+                                
+                            </form>
+                            
+                        </div>
+                        <div class="mb-1 row mt-5" >
+                            <label for="staticEmail" class="col-sm-2 col-form-label" style="margin-left:10px">Date :</label>
+                                <div class="col-sm-3">
+                                    <input type="text" class="form-control"  readonly class="form-control-plaintext" id="currentDate">
+                                </div>
+                        </div>
+                                
+                                <!-- Create PDF -->      
+                                <%-include('include/_date')%>
+                                <!-- End PDF -->
+                    </div>
+                </div>
+                <div class="d-grid gap-2 col-6 mx-auto">
+                <button class="btn btn-primary " type="button" id="download"> download pdf</button>
+            </div>
+
+            </div>
+        </div>    
+    </main>
+<!-- /Main Site -->
+            <!-- include footer -->
+            <%-include('include/_footer')%>
+            <!-- /include footer -->
+<!-- end page content -->
+	</div>
+</body>
+</html>

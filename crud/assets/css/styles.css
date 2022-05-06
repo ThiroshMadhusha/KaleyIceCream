@@ -57,14 +57,14 @@ a {
 }
 
 .text-gradient{
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
+    background: linear-gradient(to right, #039be5, #039be5);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
 #header nav{
-    background-color: #06d6a0;
+    background-color: #81d4fa;
     padding: 1em 0;
     width: 100%;
 }
@@ -97,12 +97,12 @@ table{
 
 .table td > a.btn{
     padding: .3em 1em;
-    font-size: 1.1em;
+    font-size: 0.8em;
     margin: 0 .2em;
 }
 
 .table tr:hover{
-    background-color:#06d6a0 ;
+    background-color:#81d4fa ;
 }
 
 .table tr:hover td > a{
@@ -180,3 +180,21 @@ table{
     background-color: var(--dark);
     color: var(--border);
 }
+
+
+
+.card {
+    box-shadow: 0 5px 8px 5px rgba(0, 0, 0, 0.2);
+    max-width: 650px;
+    height: 600px;
+    margin: auto;
+    text-align: center;
+  }
+
+  
+  
+  .div{
+    padding: 20px;
+    width:100%;
+}
+

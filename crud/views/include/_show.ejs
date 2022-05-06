@@ -10,12 +10,17 @@
 
     
     <td>
+
+        <a href="/view-sales?id=<%= sales[i]._id%>" class="btn border-shadow view">
+            <span class="text-gradient">View<i class="fa-solid fa-eye"></i></span>
+        </a>
+
         <a href="/update-sales?id=<%= sales[i]._id%>" class="btn border-shadow update">
-            <span class="text-gradient">Update  <i class="fa-solid fa-file-pen"></i></span>
+            <span class="text-gradient">Update<i class="fa-solid fa-file-pen"></i></span>
         </a>
 
         <a class="btn border-shadow delete" data-id=<%= sales[i]._id%>>
-            <span class="text-gradient">Delete  <i class="fa-solid fa-trash"></i></span>
+            <span class="text-gradient">Delete<i class="fa-solid fa-trash"></i></span>
         </a>
 
     </td>

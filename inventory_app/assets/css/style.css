@@ -16,7 +16,34 @@
   border: none;
   outline: none;
   padding: 10px 16px;
-  background-color: #f1f1f1;
+  background-color: #fa1010;
+  cursor: pointer;
+  font-size: 18px;
+}
+.btn1 {
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1a708;
+  cursor: pointer;
+  font-size: 18px;
+}
+.btn2 {
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #09ab26;
+  cursor: pointer;
+  font-size: 18px;
+}
+.btn3 {
+  border: none;
+  border-radius: 25px;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #fb0a0a;
   cursor: pointer;
   font-size: 18px;
 }
@@ -24,7 +51,7 @@
 /* Style the active class, and buttons on mouse-over */
 .active,
 .btn:hover {
-  background-color: #666;
+  background-color: rgb(87, 239, 231);
   color: white;
 }
 
@@ -56,7 +83,7 @@ a {
 }
 .border-shadow {
   border: 1px solid var(--border-btn);
-  box-shadow: 1px 3px 10px #a7eaf6;
+  box-shadow: 1px 3px 10px #46cbe3;
 }
 .text-dark {
   color: var(--dark);
@@ -69,8 +96,15 @@ a {
 .text-light {
   color: #9aabbd;
 }
+
+.text-gradient1 {
+  background: linear-gradient(to right, #ec049f, #ec049f);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .text-gradient {
-  background: linear-gradient(to right, #039be5, #039be5);
+  background: linear-gradient(to right, #fefefe, #fbf8fa);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;

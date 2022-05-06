@@ -86,6 +86,7 @@ exports.find = (req, res) => {
                     res.status(404).send({ message: `Cannot Update sales with ${id}. Maybe record not found!` })
                 } else {
                     res.send(data)
+                  
                 }
             })
             .catch(err => {

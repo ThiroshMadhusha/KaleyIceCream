@@ -5,38 +5,60 @@
         <div class="form-group">
             <lable for="invoice" class="text-light">Invoice No</lable>
             <input type="hidden" name="id" value="">
-            <input type="text" name="invoiceno" value="" placeholder="">
+            <input type="tel" name="invoiceno" value="" placeholder="Enter 5 digit invoice number" pattern="[0-9]{1}[0-9]{4}"  required>
         </div>
 
-        <div class="form-group">
-            <lable for="product" class="text-light"> Product Catagory</lable>
-            <input type="text" name="productcatagory" value="" placeholder="">
+
+        <label for="product" class="text-light"> Product Catagory :</label>
+        <div class="drp">
+
             
-        </div>
 
+            <select  id="productcatagory" name="productcatagory" required>
+
+                <option value="" >Select product catagory</option>
+
+                <option value="Vanilla">Vanilla</option>
+
+                <option value="Chocolate">Chocolate</option>
+
+                <option value="Strawberry">Strawberry</option>
+
+                <option value="Coffee">Cofee</option>
+
+                <option value="Chocolate Chip">Chocolate Chip</option>
+
+                <option value="Cookies&Cream">Cookies & Cream</option>
+
+                <option value="Pani mix">pani mix</option>
+
+            </select>
+
+        </div>
+        <br>
         <div class="form-group">
             <lable for="Date" class="text-light">Date</lable>
-            <input type="text" name="date" value="" placeholder="">
+            <input type="date" name="date" value="" required>
         </div>
 
         <div class="form-group">
             <lable for="Bname" class="text-light">Buyer Name</lable>
-            <input type="text" name="buyername" value="" placeholder="">
+            <input type="text" name="buyername" value="" placeholder="" required>
         </div>
 
         <div class="form-group">
-            <lable for="Bcontact" class="text-light">Buyer contact</lable>
-            <input type="text" name="buyercontact" value="" placeholder="">
+            <lable for="Bcontact" class="text-light" >Buyer contact</lable>
+            <input type="tel" name="buyercontact"  placeholder="(0XX)XXX XXXX"   pattern="[0-9]{1}[0-9]{9}" required >
         </div>
 
         <div class="form-group">
             <lable for="quantity" class="text-light">Quantity</lable>
-            <input type="text" name="quantity" value="" placeholder="">
+            <input type="number" name="quantity" value="" placeholder="" required>
         </div>
 
         <div class="form-group">
-            <lable for="rateperonequantity" class="text-light">Rate per one quantity</lable>
-            <input type="text" name="rateperonequantity" value="" placeholder="">
+            <lable for="rateperonequantity" class="text-light">Rate per one quantity (Rs)</lable>
+            <input type="number" name="rateperonequantity" value="" placeholder="" required>
         </div>
         <div class="form-group">
             <button type="submit" class="btn text-dark update">Submit</button>

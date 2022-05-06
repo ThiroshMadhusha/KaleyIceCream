@@ -21,6 +21,7 @@ $("#update_sales").submit(function(event){
     }
 
     $.ajax(request).done(function(response){
+        
         alert("Record Updated Successfully!");
     })
 

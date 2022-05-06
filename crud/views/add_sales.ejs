@@ -1,11 +1,75 @@
-<%- include('include/_header') %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/body.css">
+    
+</head>
+
+
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+
+
+<body>
+    <!-- Side navigation bar start -->
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="sidenav hidescroll">
+      <img class="sideNav-logo" src="image/logoWhite.png"/>
+      <link rel="stylesheet" href="css/background.css">
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+  <a href="#" class="w3-bar-item w3-button">Inventory Management</a>
+  <a href="#" class="w3-bar-item w3-button">Supplier Management</a>
+  <a href="/" class="w3-bar-item w3-button">Sales Management</a>
+  <a href="#" class="w3-bar-item w3-button">Employee Management</a>
+  <a href="#" class="w3-bar-item w3-button">Home</a>
+</div>
+         </div>
+	</div>
+	<!-- Side navigation bar end -->
+
+	<!-- start content -->
+
+
+<br/>
+<link rel="stylesheet" href="css/background.css">
+<div class="background-image"></div>
+<div class="main">
+    <div style="color: Red">
+      <h2></h2>
+          <!--Header-->
+    <header id="header">
+      <nav>
+       <div class="container">
+           <div class="text-center">
+               <a href="/" class="nav-brand text-dark">Sales Management</a>
+           </div>
+       </div>
+      </nav>
+    
+
+  </header>
+<!--/Header-->
+
+  
+
+
+</div>
+<link rel="stylesheet" href="css/form.css">
+
+
 
 
 <main id="site-main">
     <div class="container">
         <div class="box-nav d-flex justify-between">
             <div class="filter">
-                <a href="/"><i class="fas fa-angel-double-left"></i> All Sales</a>
+                <a href="/"><i class="fa-solid fa-angle-left"></i> </a>
             </div>
 
         </div>

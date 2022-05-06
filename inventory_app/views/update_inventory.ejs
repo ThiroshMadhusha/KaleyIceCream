@@ -106,9 +106,8 @@
 
                     <div class="form-group">
                         <lable for="category" class="text-light">Category</lable>
-                        <input type="text" name="category" value="<%= inventory.category %>" placeholder="Enter The Category" readonly>
-                        <select id="select" name="category" required>
-                           <option select disable hidden>Select Category Type</option>
+                        <select id="select" name="category" value="<%= inventory.category %>">
+                            <option value="<%= inventory.category %>"><%= inventory.category %></option>
                             <option value="Cup">Cup</option>
                             <option value="Packet">Packet</option>
                             <option value="Bottle">Bottle</option>
@@ -121,9 +120,8 @@
 
                     <div class="form-group">
                         <lable for="flavour" class="text-light">Flavour</lable>
-                        <input type="text" name="flavour" value="<%= inventory.flavour %>" placeholder="Enter The Flavour Type" readonly>
-                        <select id="select" name="flavour" required>
-                            <option select disable hidden>Select Flavour Type</option>
+                        <select id="select" name="flavour" value="<%= inventory.flavour %>">
+                            <option value="<%= inventory.flavour %>"><%= inventory.flavour %></option>
                             <option value="Chocolate">Chocolate</option>
                             <option value="Vanila">Vanila</option>
                             <option value="Strawberry">Strawberry</option>

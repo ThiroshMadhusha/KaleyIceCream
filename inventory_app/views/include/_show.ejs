@@ -9,13 +9,13 @@
     <td><%= inventorys[i].temp %></td>
     <td><%= inventorys[i].status %></td>
     <td>
-        <a href="/view-inventory?id=<%= inventorys[i]._id %>" class="btn border-shadow update">
+        <a href="/view-inventory?id=<%= inventorys[i]._id %>" class="btn1 border-shadow update">
             <span class="text-gradient"><i class="fa-solid fa-pen-to-square"></i> View</span>
         </a>
-        <a href="/update-inventory?id=<%= inventorys[i]._id %>" class="btn border-shadow update">
+        <a href="/update-inventory?id=<%= inventorys[i]._id %>" class="btn2 border-shadow update">
             <span class="text-gradient"><i class="fa-solid fa-pen-to-square"></i> Update</span>
         </a>
-        <a class="btn border-shadow delete" data-id="<%= inventorys[i]._id %>">
+        <a class="btn3 border-shadow delete" data-id="<%= inventorys[i]._id %>">
             <span class="text-gradient"><i class="fa-solid fa-trash-can"></i> Delete</span>
         </a>
     </td>

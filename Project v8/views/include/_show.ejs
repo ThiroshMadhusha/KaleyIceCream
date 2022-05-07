@@ -1,0 +1,22 @@
+<% for(var i = 0;i<userss.length;i++){%>
+    
+<tr>
+    <td><%= i+1%></td>
+    <td><%= userss[i].name%></td>
+    <td><%= userss[i].email%></td>
+    <td><%= userss[i].gender%></td>
+    <td><%= userss[i].status%></td>
+    <td>
+        <a href="/user-profile?id=<%= userss[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fa-solid fa-address-card"></i> View</span>
+        </a>
+        <a href="/update-user?id=<%= userss[i]._id%>" class="btn border-shadow update">
+            <span class="text-gradient"><i class="fa-solid fa-pen"></i> Update</span>
+        </a>
+        <a class="btn border-shadow delete" data-id="<%= userss[i]._id%>">
+            <span class="text-gradient"><i class="fa-solid fa-trash"></i> Delete</span>
+        </a>
+    </td>
+</tr>
+
+<%}%>

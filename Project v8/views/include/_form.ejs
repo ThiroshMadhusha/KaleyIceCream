@@ -1,0 +1,67 @@
+            <!--form hadling-->
+            <form action="/api/userss" method="POST" id="add_user">
+              <div class="new_user">
+                  <div class="form-group">
+                      <label for="name" class="text-light">Name :</label>
+                      <input type="hidden" name="id" value="">
+                      <input type="text" name="name" value="" placeholder="Enter employee's name..." required>
+                  </div> <br/>
+                  <div class="form-group">
+                       <label for="email" class="text-light">Email :</label>
+                       <input type="text" name="email" value="" placeholder="Enter employee's email address..." required>
+               </div>
+               <br/>
+               
+               <div class="form-group">
+                <label for="number" class="text-light">Phone Number :</label>
+                <input type="text" name="number" value="" pattern="[0-9]{1}[0-9]{9}" placeholder="Enter employee's phone number..." required>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label for="designation" class="text-light">Designation :</label>
+                    <select  id="designation" name="designation" required>
+                        <option value="" >------</option>
+                        <option value="Office manager">Office manager</option>
+                        <option value="Facilities manager">Facilities manager</option>
+                        <option value="Account executive">Account executive</option>
+                        <option value="Program manager">Program manager</option>
+                        <option value="Clerk">Clerk</option>
+                        <option value="Accountant">Accountant</option>
+                        <option value="Business administrator">Business administrator</option>
+                    </select>
+                </div>
+                <br/>
+                <div class="form-group">
+                    <label for="salary" class="text-light">Salary(Rs) :</label>
+                    <input type="number" min="0" max="" name="salary" value="" placeholder="Enter employee's  salary..." required>
+                 </div>
+                 <br/>
+                <br/>
+                 <div class="form-group">
+                   <label for="gender" class="text-light">Gender :</label>
+                   <div class="radio inline" checked required>
+                       <input type="radio" name="gender" value="Male" required>
+                       <label for="gender" class="text-light">Male</label>
+                       <input type="radio" name="gender" value="Female" required>
+                       <label for="gender" class="text-light">Female</label>
+                   </div>
+                <br/> <br/>
+                   <div class="form-group">
+                       <label for="status" class="text-light">Status :</label>
+                   <div class="radio inline">
+                       <input type="radio" name="status" value="FullDay" required>
+                       <label for="status" class="text-light">FullDay</label>
+                       <input type="radio" name="status" value="HalfDay" required>
+                       <label for="status" class="text-light">HalfDay</label>
+                   </div>
+
+                   
+            <br/>
+               
+                   <div class="form-group">
+                    <input type="submit" value="Submit">
+                   </div>
+
+               </div>
+              </div>
+           </form>

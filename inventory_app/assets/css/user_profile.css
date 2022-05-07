@@ -1,0 +1,84 @@
+.card {
+    box-shadow: 0px 10px 28px 0 rgba(0, 0, 0, 0.2);
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  .card2 {
+    padding-top: 1%;
+    padding-bottom: .1%;
+    box-shadow: 0px 10px 28px 0 rgba(0, 0, 0, 0.2);
+    max-width:900px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+  }
+  
+  .title {
+    color: grey;
+    font-size: 38px;
+  }
+  
+ h2{
+
+    text-decoration: none;
+    font-size: 40px;
+    color: black;
+
+ }
+ h1{
+
+    text-decoration: none;
+    font-size: 50px;
+    color: black;
+
+ }
+  button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #81d4fa;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px;
+  }
+  
+  a {
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+    text-align: center;
+    padding-left:20%;
+  }
+
+
+  
+  button:hover {
+    opacity: 0.7;
+    background-color: #039be5;
+  }
+
+
+  
+input[type=text], select {
+  color: grey;
+  text-align: left;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+div[class=form-group]{
+  border-radius: 0px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  text-align: left;
+}

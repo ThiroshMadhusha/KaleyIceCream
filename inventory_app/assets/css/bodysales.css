@@ -1,0 +1,167 @@
+
+:root {
+    --sideNaviWidth: 300px;
+    --mainColor : #4caf50;
+
+}
+body {
+  color: #324960;
+  font-family: sans-serif;
+  padding-bottom: 20%;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 0.5s;
+  max-width: 350px;
+  background-color: var(--mainColor);
+  overflow: hidden;
+  
+}
+
+.overlay .closebtn {
+  color: white;
+  position: absolute;
+  top: 20px;
+  right: 10px;
+  font-size: 40px;
+  z-index: 3;
+}
+
+.sidenav {
+  height: 100%;
+  width: var(--sideNaviWidth);
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #81d4fa;
+  overflow-x: hidden;
+  margin-bottom:20px;
+  padding-top: 20px;
+}
+
+.sideNav-logo {
+    width: var(--sideNaviWidth);
+}
+
+.sidenav a {
+  padding: 10px 270px 10px 50px;
+  text-decoration: none;
+  font-size: 28px;
+  color: White;
+  display: block;
+}
+
+.sidenav a:hover {
+  color: #039be5;
+  background-color: White;
+}
+
+.sidenav h1 {
+    color: white;
+}
+
+.classActivePage {
+    background-color: #327835;
+}
+.card {
+  box-shadow: 0px 10px 28px 0 rgba(0, 0, 0, 0.2);
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 0%;
+
+}
+
+.main {
+  margin-left: var(--sideNaviWidth);
+  font-size:18px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.hidescroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.hidescroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+@media screen and (max-width: 700px) {
+  .sidenav {
+    width: 100%;
+    position: relative;
+  }
+  .sidenav a {
+    float: left;
+    width: 100%;
+    font-size: 18px;
+
+  }
+  .main {margin-left: 0px;}
+}
+
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #2b2d42;
+
+ 
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #dddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #81d4fa;
+  color: white;
+}
+
+input[type=text], select {
+  width: 40%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+
+
+input[type="button"], select{
+  width: 25%;
+  padding: 10px 15px 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+ 
+}

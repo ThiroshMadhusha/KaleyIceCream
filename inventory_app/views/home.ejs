@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bodysales.css">
+
+    
+</head>
+
+
+<!--include header-->
+<%-include('include/_saleheader')%>
+<!--/include header-->
+
+
+<body>
+    <!-- Side navigation bar start -->
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="sidenav hidescroll">
+      <img class="sideNav-logo" src="images/logoWhite.png"/>
+      <link rel="stylesheet" href="css/background.css">
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+                <a href="http://localhost:3000/" class="w3-bar-item w3-button">Inventory Management</a>
+                <a href="/sales" class="w3-bar-item w3-button">Sales Management</a>
+                <a href="/emp" class="w3-bar-item w3-button">Employee Management</a>
+                <a href="#" class="w3-bar-item w3-button">Supplier Management</a>
+                <a href="#" class="w3-bar-item w3-button">Home</a>
+</div>
+         </div>
+	</div>
+	<!-- Side navigation bar end -->
+
+	<!-- start content -->
+
+
+<br/>
+<link rel="stylesheet" href="css/background.css">
+<div class="background-image"></div>
+<div class="main">
+    <div style="color: Red">
+      <h2></h2>
+          <!--Header-->
+    <header id="header">
+      <nav>
+       <div class="container">
+           <div class="text-center">
+               <a href="/sales" class="nav-brand text-dark">Sales Management</a>
+           </div>
+       </div>
+      </nav>
+    
+
+  </header>
+<!--/Header-->
+
+  
+
+
+</div>
+
+    <!--Main Site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d-flex justify-between">
+                <a href="/add-sales" class="border-shadow">
+                    <span class="text-gradient">Add new sales record <i class="fa-solid fa-file-circle-plus"></i> </span>
+                </a>
+                <input type="text" id="myInput" onkeyup='tableSearch()' placeholder="Search buyer name" >
+            </div>
+
+           
+            
+            
+    
+          <form action="/sales" method="POST">
+              <table class="table" id="myTable" data-filter-control="true" data-show-search-clear-button="true">
+                  <thead class="thead-dark">
+                  <tr>
+                      <th> id </th>
+                      <th> Invoice No </th>
+                      <th> Date </th>
+                      <th> Product Catagory </th>
+                      <th> Buyer Name </th>
+                      <th> Action</th>
+                  </tr>
+              </thead>
+              <tbody>
+    
+                     <%- include('include/_saleshow') %>
+    
+              </tbody>
+              </table>
+          </form>
+            
+        </div>
+        <script type="application/javascript">
+            function tableSearch() {
+                let input, filter, table, tr, td, txtValue;
+    
+                //Intialising Variables
+                input = document.getElementById("myInput");
+                filter = input.value.toUpperCase();
+                table = document.getElementById("myTable");
+                tr = table.getElementsByTagName("tr");
+    
+                for (let i = 0; i < tr.length; i++) {
+                    td = tr[i].getElementsByTagName("td")[4];
+                    if (td) {
+                        txtValue = td.textContent || td.innerText;
+                        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                            tr[i].style.display = "";
+                        } else {
+                            tr[i].style.display = "none";
+                        }
+                    }
+                }
+    
+            }
+    </script>
+
+   </main>
+    <!--/Main Site-->
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->
+
+	<!-- end page content -->
+
+	</div>
+</body>
+</html>

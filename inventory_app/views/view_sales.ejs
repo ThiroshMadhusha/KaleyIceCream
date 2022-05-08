@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bodysales.css">
+    
+</head>
+
+
+<!--include header-->
+<%-include('include/_header')%>
+<!--/include header-->
+
+
+<body>
+    <!-- Side navigation bar start -->
+	<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+	<div id="myNav" class="overlay">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<div class="sidenav hidescroll">
+      <img class="sideNav-logo" src="images/logoWhite.png"/>
+      <link rel="stylesheet" href="css/background.css">
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+                <a href="http://localhost:3000/" class="w3-bar-item w3-button">Inventory Management</a>
+                <a href="/sales" class="w3-bar-item w3-button">Sales Management</a>
+                <a href="#" class="w3-bar-item w3-button">Employee Management</a>
+                <a href="#" class="w3-bar-item w3-button">Supplier Management</a>
+                <a href="#" class="w3-bar-item w3-button">Home</a>
+</div>
+         </div>
+	</div>
+	<!-- Side navigation bar end -->
+
+	<!-- start content -->
+
+
+<br/>
+<link rel="stylesheet" href="css/background.css">
+<div class="background-image"></div>
+<div class="main">
+    <div style="color: black">
+      <h2></h2>
+          <!--Header-->
+    <header id="header">
+      <nav>
+       <div class="container">
+           <div class="text-center">
+               <a href="/" class="nav-brand text-dark">Sales Management</a>
+           </div>
+       </div>
+      </nav>
+    
+
+  </header>
+  <script>
+    window.onload = function () {
+        document.getElementById("download")
+            .addEventListener("click", () => {
+                const invoice = this.document.getElementById("invoice");
+                console.log(invoice);
+                console.log(window);
+                var opt = {
+                    margin: 1,
+                    filename: 'myfile.pdf',
+                    image: { type: 'jpeg', quality: 0.98 },
+                    html2canvas: { scale: 2 },
+                    jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+                };
+                html2pdf().from(invoice).set(opt).save();
+            })
+    }
+    
+    </script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+
+
+<main id="site-main">
+    <div class="container">
+        <div class="box-nav d-flex justify-between">
+            <div class="filter">
+                <a href="/sales"><i class="fa-solid fa-angle-left"></i></a>
+            </div>
+
+        </div>
+      
+
+        <div class="form-title text-center">
+
+          
+
+        </div><br><br>
+       
+        
+            <div class="view_sales card" id="invoice">
+                <br><br>
+                <h2 class="text-dark">Invoice No #<%= sales.invoiceno%></h2>
+                <br><br>
+
+                <h4>Product Catagory :</h4> <%= sales.productcatagory%>
+
+                <br><br>
+
+                <h4>Date :</h4> <%= sales.date%>
+
+                <br><br>
+
+                <h4>Buyer Name :</h4> <%= sales.buyername%>
+
+                <br><br>
+
+                <h4>Buyer Contact :</h4> <%= sales.buyercontact%>
+
+                <br><br>
+
+                <h4>Quantity :</h4> <%= sales.quantity%>
+
+                <br><br>
+
+                <h4>Rate per one quantity :</h4> Rs<%= sales.rateperonequantity%>.00
+
+                <br><br>
+
+                <h4>Full bulk price :</h4> Rs<%= sales.rateperonequantity *sales.quantity%>.00
+
+               
+            </div>  
+            <br><br><br>  
+
+            <div class="row">
+                <div class="col-md-12 text-right mb-3">
+                    <i class="fa-solid fa-file-pdf"></i>
+                <input type="button" 
+                    
+                    class="btn btn-primary" 
+                    id="download"
+                    value="Download Employee Details as a pdf"  >
+                    
+                </button>
+            </div>
+    </div>
+</main>
+
+
+
+<%- include('include/_footer') %>

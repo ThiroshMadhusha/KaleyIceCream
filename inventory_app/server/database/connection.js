@@ -1,3 +1,4 @@
+// Create MongoDB Server Connection Path
 const mongoose = require("mongoose");
 
 const connectDB = async () => {

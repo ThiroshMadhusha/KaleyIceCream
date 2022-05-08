@@ -4,7 +4,6 @@ var schema = new mongoose.Schema({
   invoiceno: {
     type: Number,
     required: true,
-    unique: true,
   },
   productcatagory: {
     type: String,
@@ -32,6 +31,6 @@ var schema = new mongoose.Schema({
   },
 });
 
-const Salesdb = mongoose.model("Salesdb", schema);
+const Salesdb = mongoose.model("salesdb", schema);
 
 module.exports = Salesdb;

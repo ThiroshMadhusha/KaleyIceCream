@@ -1,3 +1,4 @@
+// Create Inventory Model Class
 const mongoose = require("mongoose");
 
 var schema = new mongoose.Schema({
@@ -28,6 +29,7 @@ var schema = new mongoose.Schema({
     require: true,
   },
 });
+
 
 const Inventorydb = mongoose.model("inventorydb", schema);
 

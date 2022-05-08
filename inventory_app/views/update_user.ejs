@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/cusbody.css">
+    
+</head>
+
+
+<!--include header-->
+<%-include('include/_empheader')%>
+<!--/include header-->
+
+
+<body>
+    <!-- Side navigation bar start -->
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+    <div id="myNav" class="overlay">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <div class="sidenav hidescroll">
+      <img class="sideNav-logo" src="images/logoWhite.png"/>
+      <link rel="stylesheet" href="css/background.css">
+<!-- Sidebar -->
+<div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
+                <a href="http://localhost:3000/" class="w3-bar-item w3-button">Inventory Management</a>
+                <a href="/sales" class="w3-bar-item w3-button">Sales Management</a>
+                <a href="#" class="w3-bar-item w3-button">Employee Management</a>
+                <a href="#" class="w3-bar-item w3-button">Supplier Management</a>
+                <a href="#" class="w3-bar-item w3-button">Home</a>
+</div>
+         </div>
+    </div>
+    <!-- Side navigation bar end -->
+
+    <!-- start content -->
+
+
+<br/>
+<link rel="stylesheet" href="css/background.css">
+<div class="background-image"></div>
+<div class="main">
+    <div style="color: Red">
+      <h2></h2>
+          <!--Header-->
+    <header id="header">
+      <nav>
+       <div class="container">
+           <div class="text-center">
+               <a href="/" class="nav-brand text-dark">Employee Management</a>
+           </div>
+       </div>
+      </nav>
+      
+  </header>
+  <br/>
+  <div class="topnav">
+    <a href=""></a>
+     <a class="" href="#home"> </a>
+    </div>
+</div>
+<!--/Header-->
+<br/>
+<!--include header-->
+<%-include('include/_empheader')%>
+<!--/include header-->
+
+
+ 
+    <!--Main Site-->
+    <main id="site-main">
+        <div class="container">
+            <div class="box-nav d flex justify-between">
+            <div class="filter">
+                <a href="/"><i class="fa fa-angle-double-left"></i>All Employees</a>
+            </div>
+            </div>
+            <div class="form-title text-center">
+                <h2 class="text-dark">Update User</h2>
+                <br>
+                <span class="text-light">Use the below form to update the account</span>
+            </div>
+            <br>
+            <!--add user form-->
+                        <!--form hadling-->
+                        <form action="/api/userss" method="POST" id="update_user">
+                            <div class="new_user">
+                                <div class="form-group">
+                                    <label for="name" class="text-light">Name</label>
+                                    <input type="hidden" name="id" value="<%=user._id%>">
+                                    <input type="text" name="name" value="<%=user.name%>" placeholder="">
+                                </div>
+                                <br/>
+                                <div class="form-group">
+                                     <label for="email" class="text-light">Email</label>
+                                     <input type="hidden" name="email" value="">
+                                     <input type="text" name="email" value="<%=user.email%>" placeholder="">
+                             </div>
+                             <br/>
+                             <div class="form-group">
+                                <label for="number" class="text-light">Phone Number :</label>
+                                <input type="text" name="number" value="<%=user.number%>" placeholder="">
+                                </div>
+                                <br/>
+
+                                <div class="form-group">
+                                    <label for="designation" class="text-light">Designation :</label>
+                                      <select id="designation" name="designation">
+                                        <option value="<%=user.designation%>"><%=user.designation%></option>
+                                          <option value="Office manager">Office manager</option>
+                                          <option value="Facilities manager">Facilities manager</option>
+                                          <option value="Account executive">Account executive</option>
+                                          <option value="Program manager">Program manager</option>
+                                          <option value="Clerk">Clerk</option>
+                                          <option value="Accountant">Accountant</option>
+                                          <option value="Business administrator">Business administrator</option>
+                                      </select>
+                                  </div>
+                                  <br/>
+                                  <div class="form-group">
+                                    <label for="salary" class="text-light">Salary(Rs) :</label>
+                                    <input type="number" min="0" max="" name="salary" value="<%=user.salary%>" placeholder="Enter employee's  salary...">
+                                 </div>
+                                 <br/>
+                                <br/>
+                             <div class="form-group">
+                                 <label for="gender" class="text-light">Gender :</label>
+                                 <div class="radio inline">
+                                     <input type="radio" name="gender" value="Male">
+                                     <label for="gender" class="text-light">Male</label>
+                                     <input type="radio" name="gender" value="Female">
+                                     <label for="gender" class="text-light">Female</label>
+                                 </div>
+                              <br/>
+                                 <div class="form-group">
+                                     <label for="status" class="text-light">Status :</label>
+                                 <div class="radio inline">
+                                     <input type="radio" name="status" value="FullDay">
+                                     <label for="status" class="text-light">FullDay</label>
+                                     <input type="radio" name="status" value="HalfDay">
+                                     <label for="status" class="text-light">HalfDay</label>
+                                 </div>
+                             
+                                 <div class="form-group">
+                                    <input type="submit" value="Submit">
+                                   </div>
+              
+                             </div>
+                            </div>
+                         </form>
+        </br>
+        </div>
+    </main>
+    <!--/Main Site-->
+
+<!--include footer-->
+<%-include('include/_footer')%>
+<!--/include footer-->
+    <!-- end page content -->
+
+    </div>
+</body>
+</html>

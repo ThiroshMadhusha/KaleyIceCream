@@ -77,7 +77,7 @@ route.delete("/api/sales/:id", salescontroller.delete);
  * @description Root Route
  * @method GET
  */
-route.get("/", employeeservices.homeRoutesEmployee);
+route.get("/emp", employeeservices.homeRoutesEmployee);
 
 /**
  * @description add users

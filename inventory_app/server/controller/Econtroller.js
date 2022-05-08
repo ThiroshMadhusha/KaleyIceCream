@@ -1,6 +1,6 @@
 const req = require("express/lib/request");
 const res = require("express/lib/response");
-var Userdb = require("../model/model");
+var Userdb = require("../model/employeemodel");
 
 //create and save new user
 exports.create = (req, res) => {
@@ -25,7 +25,7 @@ exports.create = (req, res) => {
   user
     .save(user)
     .then((data) => {
-      res.redirect("/");
+      res.redirect("/emp");
       res.send(data);
     })
     .catch((err) => {

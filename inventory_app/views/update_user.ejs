@@ -23,11 +23,11 @@
       <link rel="stylesheet" href="css/background.css">
 <!-- Sidebar -->
 <div class="w3-sidebar w3-light-grey w3-bar-block" style="width:25%">
-                <a href="http://localhost:3000/" class="w3-bar-item w3-button">Inventory Management</a>
-                <a href="/sales" class="w3-bar-item w3-button">Sales Management</a>
-                <a href="#" class="w3-bar-item w3-button">Employee Management</a>
-                <a href="#" class="w3-bar-item w3-button">Supplier Management</a>
-                <a href="#" class="w3-bar-item w3-button">Home</a>
+  <a href="#" class="w3-bar-item w3-button">Inventory Management</a>
+  <a href="#" class="w3-bar-item w3-button">Supplier Management</a>
+  <a href="#" class="w3-bar-item w3-button">Sales Management</a>
+  <a href="#" class="w3-bar-item w3-button">Employee Management</a>
+  <a href="#" class="w3-bar-item w3-button">Home</a>
 </div>
          </div>
     </div>
@@ -47,7 +47,7 @@
       <nav>
        <div class="container">
            <div class="text-center">
-               <a href="/" class="nav-brand text-dark">Employee Management</a>
+               <a href="/emp" class="nav-brand text-dark">Employee Management</a>
            </div>
        </div>
       </nav>
@@ -72,7 +72,7 @@
         <div class="container">
             <div class="box-nav d flex justify-between">
             <div class="filter">
-                <a href="/"><i class="fa fa-angle-double-left"></i>All Employees</a>
+                <a href="/emp"><i class="fa fa-angle-double-left"></i>All Employees</a>
             </div>
             </div>
             <div class="form-title text-center">
@@ -84,7 +84,7 @@
             <!--add user form-->
                         <!--form hadling-->
                         <form action="/api/userss" method="POST" id="update_user">
-                            <div class="new_user">
+                            <div class="update_user">
                                 <div class="form-group">
                                     <label for="name" class="text-light">Name</label>
                                     <input type="hidden" name="id" value="<%=user._id%>">
@@ -93,7 +93,6 @@
                                 <br/>
                                 <div class="form-group">
                                      <label for="email" class="text-light">Email</label>
-                                     <input type="hidden" name="email" value="">
                                      <input type="text" name="email" value="<%=user.email%>" placeholder="">
                              </div>
                              <br/>

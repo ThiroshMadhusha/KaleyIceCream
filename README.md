@@ -9,7 +9,7 @@
 ### IT20146238 - Jayathunga T.M. (Leader) - Inventory Management System
 
 ![Screenshot_11](https://user-images.githubusercontent.com/79472177/182443725-24611459-ef4d-4fc8-9985-340f8c1f7b92.jpg)
-![Screenshot_12](https://user-images.githubusercontent.com/79472177/182443751-22a1a762-580e-4716-928d-12a31f797e99.jpg)
+![182443751-22a1a762-580e-4716-928d-12a31f797e99](https://user-images.githubusercontent.com/79472177/189486870-df0c02eb-8dcc-441f-b3c7-34064c2311aa.jpg)
 ![Screenshot_13](https://user-images.githubusercontent.com/79472177/182443763-e0c48786-fb22-4c06-ac13-96e126d92cc8.jpg)
 ![Screenshot_14](https://user-images.githubusercontent.com/79472177/182443820-65dc2c81-ed9b-45e8-a688-6289b7a2c58f.jpg)
 
